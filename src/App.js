@@ -31,7 +31,8 @@ export default function App() {
           icon : current.condition.icon,
           conditionText: current.condition.text
         })
-        setResults('');
+        setCity('');
+        
       }).catch(err => {
         console.log(err);
         alert(err.message);
@@ -43,7 +44,7 @@ export default function App() {
   return (
     <div>
       <Title />
-      <Form getWheather={getWheather} setCity={setCity} />
+      <Form getWheather={getWheather} setCity={setCity} city={city}/>
       <Results results={results} />
     </div>
   );

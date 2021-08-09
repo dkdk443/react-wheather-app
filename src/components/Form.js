@@ -7,6 +7,7 @@ const Form = (props) => {
       <input 
         type="text" 
         placeholder="city name" 
+        value={props.city}
         onChange={e => {props.setCity(e.target.value)}}
         />
       <button
