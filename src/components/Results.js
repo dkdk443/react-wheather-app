@@ -2,15 +2,18 @@ import React from 'react';
 const Results = (props) => {
   const {cityName, country, templeture, conditionText, icon} = props.results;
   return (
-    <div className="results">
+    <div className="section">
       <div>
-        {cityName
-          && <div>{cityName}</div>}
+       {cityName
+          && <h2 className="title is-2">{cityName}</h2>}
         {country
-          && <div>{country}</div>}
+          && <h3 className="subtitle is-3">{country}</h3>}
         {templeture
           && <div>{templeture}<span>℃</span>
-          {icon && <img src={icon} />} 
+          
+          {icon && <figure class="image is-64x64">
+            <img src={icon} />
+          </figure>} 
           {conditionText && <p>{conditionText}</p>} 
         </div>}
       </div>

@@ -5,6 +5,7 @@ import Results from './components/Results';
 import Loading from './components/Loading';
 import axios from 'axios';
 import './style.css';
+import 'bulma/css/bulma.css'
 
 export default function App() {
   const [city, setCity] = useState('');
@@ -46,7 +47,7 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="container box">
       <Title />
       <Form getWheather={getWheather} setCity={setCity} city={city}/>
       
