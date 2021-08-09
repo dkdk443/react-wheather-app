@@ -1,15 +1,16 @@
 import React from 'react';
 const Form = (props) => {
   return (
-    <form>
+    <form
+    onSubmit={e => {props.getWheather(e)}}
+    >
       <input 
         type="text" 
         placeholder="city name" 
         onChange={e => {props.setCity(e.target.value)}}
         />
       <button
-        type="submit"
-        onClick={e => {props.getWheather(e)}}
+        type="submit" 
       >Get Whather</button>
     </form>
     

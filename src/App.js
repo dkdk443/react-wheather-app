@@ -31,7 +31,12 @@ export default function App() {
           icon : current.condition.icon,
           conditionText: current.condition.text
         })
-      });
+      }).catch(err => {
+        console.log(err);
+        alert(err.message);
+
+      }
+      );
   };
 
   return (
