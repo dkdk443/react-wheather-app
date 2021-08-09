@@ -21,7 +21,7 @@ export default function App() {
     setLoading(true);
     axios
       .get(
-        `https://api.weatherapi.com/v1/current.json?key=123e2943a98346ad96431630210908&q=${city}&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=123e2943a98346ad96431630210908&q=${city}&aqi=no&lang=ja`
       )
       .then(res => {
         console.log(res.data);
@@ -49,8 +49,9 @@ export default function App() {
     <div>
       <Title />
       <Form getWheather={getWheather} setCity={setCity} city={city}/>
-      <Results results={results} />
-      {loading && <Loading />}
+      
+      {loading ? <Loading />
+        :<Results results={results} />}
     </div>
   );
 }

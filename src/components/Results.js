@@ -4,7 +4,6 @@ const Results = (props) => {
   return (
     <div className="results">
       <div>
-        <h2>results</h2>
         {cityName
           && <div>{cityName}</div>}
         {country
