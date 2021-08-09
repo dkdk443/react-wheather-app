@@ -8,6 +8,13 @@ import './style.css';
 
 export default function App() {
   const [city, setCity] = useState('');
+  const [results, setResults] = useState({
+    country: '',
+    cityName: '',
+    templeture: '',
+    icon : '',
+    conditionText: ''
+  });
   const getWheather = e => {
     e.preventDefault();
     axios

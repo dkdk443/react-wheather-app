@@ -9,7 +9,7 @@ const Form = (props) => {
         />
       <button
         type="submit"
-        onClick={e => {props.getWheather()}}
+        onClick={e => {props.getWheather(e)}}
       >Get Whather</button>
     </form>
     
