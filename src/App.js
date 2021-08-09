@@ -4,7 +4,6 @@ import Form from './components/Form';
 import Results from './components/Results';
 import axios from 'axios';
 import './style.css';
-// データの保管場所（都市名・国・気温・天気）
 
 export default function App() {
   const [city, setCity] = useState('');
@@ -19,7 +18,7 @@ export default function App() {
     e.preventDefault();
     axios
       .get(
-        'https://api.weatherapi.com/v1/current.json?key=123e2943a98346ad96431630210908&q=London&aqi=no'
+        `https://api.weatherapi.com/v1/current.json?key=123e2943a98346ad96431630210908&q=${city}&aqi=no`
       )
       .then(res => {
         console.log(res.data);
