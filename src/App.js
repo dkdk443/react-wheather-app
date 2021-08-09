@@ -23,6 +23,15 @@ export default function App() {
       )
       .then(res => {
         console.log(res.data);
+        let current = res.data.current;
+        let location = res.data.London;
+        setResults({
+          country: location.country,
+          cityName: location.name,
+          templeture: current.temp_c,
+          icon : current.condition.icon,
+          conditionText: current.condition.text
+        })
       });
   };
 
