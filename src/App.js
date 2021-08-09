@@ -24,7 +24,7 @@ export default function App() {
       .then(res => {
         console.log(res.data);
         let current = res.data.current;
-        let location = res.data.London;
+        let location = res.data.location;
         setResults({
           country: location.country,
           cityName: location.name,
@@ -39,7 +39,7 @@ export default function App() {
     <div>
       <Title />
       <Form getWheather={getWheather} setCity={setCity} />
-      <Results />
+      <Results results={results} />
     </div>
   );
 }
