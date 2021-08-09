@@ -31,6 +31,7 @@ export default function App() {
           icon : current.condition.icon,
           conditionText: current.condition.text
         })
+        setResults('');
       }).catch(err => {
         console.log(err);
         alert(err.message);
