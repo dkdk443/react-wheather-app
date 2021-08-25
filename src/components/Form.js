@@ -1,8 +1,6 @@
 import React from 'react';
 const Form = (props) => {
   return (
-
- 
       <form
         className=""
         onSubmit={e => {props.getWheather(e)}}
